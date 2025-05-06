@@ -42,17 +42,16 @@ def pertanyaan_selanjutnya(ganti_jurusan=False):
         index_jurusan += 1
         index_minat = -1
 
-    # Apabila daftar jurusan sudah habis berarti tidak terdeteksi penyakit
     if index_jurusan >= len(jurusan):
         hasil_penentuan()
         return
 
     current_jurusan = jurusan[index_jurusan]
 
-    # Atur index minat
+   
     index_minat += 1
 
-    # Apabila semua gejala dari penyakit habis, berarti terdeteksi penyakit tsb
+    
     if index_minat >= len(minat[current_jurusan]):
         hasil_penentuan(current_jurusan)
         return
